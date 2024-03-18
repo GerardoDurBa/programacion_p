@@ -25,5 +25,7 @@ public class RestauranApp {
         menu.addDish(breakfast2);
         menu.addDish(breakfast1);
         
+        System.out.println(menu.getDishesPerType(DishType.BREAKFAST));
+        
     }
 }

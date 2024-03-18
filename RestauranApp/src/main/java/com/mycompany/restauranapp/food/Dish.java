@@ -16,6 +16,13 @@ public class Dish {
         this.price = price;
         this.quantity = quantity;
     }
+
+    public DishType getType() {
+        return this.type;
+    }
+
+    public String getName() {
+        return name;
+    }
     
-   
 }
