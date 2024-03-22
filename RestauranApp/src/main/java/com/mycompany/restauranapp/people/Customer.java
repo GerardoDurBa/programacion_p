@@ -6,11 +6,13 @@ public class Customer {
     CustomerRole role;
     String id;
     String fullname;
+    int price;
 
-    public Customer(CustomerRole role, String id, String fullname) {
+    public Customer(CustomerRole role, String id, String fullname, int price) {
         this.role = role;
         this.id = id;
         this.fullname = fullname;
+        this.price = price;
     }
     
     
@@ -21,10 +23,13 @@ public class Customer {
         
     }
     public void sellFood(){
-        if(this.role != CustomerRole.ADMINISTRATIVE){
-           System.out.println("Uste´ no tiene permijo pa´ vende´");
+        if(this.role == CustomerRole.ADMINISTRATIVE){
+           System.out.println("Uste´ no tiene permiso para vender");
            return;
-        } 
+        }
+        else if (this.role == CustomerRole.STUDENT) {
+            System.out.println(this.price + "2400");
+        }
         System.out.println("Ya lo atiendo cole!");
     }
 }

@@ -25,6 +25,7 @@ public ArrayList<String> getDishesPerType(DishType dishType){
     for(Dish dish : dishlist){
         if (dish.getType() == dishType) {
             foundDishes.add(dish.getName());
+            foundDishes.add(dish.getIngredients());
         }
     }
     return foundDishes;
